@@ -13,6 +13,33 @@
 
 NexScan is an AI-powered penetration testing and vulnerability scanning tool that integrates multiple AI providers (OpenAI, Grok, Ollama, Mistral, OpenRouter) to deliver intelligent payload generation, comprehensive security assessments, and professional reporting.
 
+## Screenshots
+
+### Tool Startup & Banner
+<p align="center">
+  <img src="assets/screenshot_banner.png" alt="NexScan Startup" width="100%">
+</p>
+
+### Reconnaissance & Crawling
+<p align="center">
+  <img src="assets/screenshot_scanning.png" alt="NexScan Scanning" width="100%">
+</p>
+
+### Vulnerability Detection
+<p align="center">
+  <img src="assets/screenshot_vulnerabilities.png" alt="NexScan Vulnerabilities" width="100%">
+</p>
+
+### Scan Summary & Report Generation
+<p align="center">
+  <img src="assets/screenshot_summary.png" alt="NexScan Summary" width="100%">
+</p>
+
+### CLI Options
+<p align="center">
+  <img src="assets/screenshot_help.png" alt="NexScan Help" width="100%">
+</p>
+
 ## Features
 
 ### Core Capabilities
