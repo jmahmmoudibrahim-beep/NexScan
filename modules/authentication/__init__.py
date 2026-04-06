@@ -1,1 +1,1 @@
-# NexScan - Authentication Module
+from modules.authentication.auth_tester import AuthenticationTester

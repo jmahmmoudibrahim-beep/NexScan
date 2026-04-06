@@ -1,1 +1,1 @@
-# NexScan - Business Logic Module
+from modules.business_logic.logic_tester import BusinessLogicTester

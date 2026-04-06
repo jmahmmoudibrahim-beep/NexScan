@@ -128,7 +128,7 @@ class ScannerEngine:
     
     def crawl_recursive(self) -> Set[str]:
         """Recursively crawl the target website."""
-        console.print("[bold blue]🕷️  Starting web crawler...[/bold blue]")
+        console.print("[bold blue]  Starting web crawler...[/bold blue]")
         
         all_urls = set([self.target_url])
         queue = [(self.target_url, 0)]
@@ -165,7 +165,7 @@ class ScannerEngine:
                     description=f"[cyan]Crawling... Found {len(all_urls)} URLs"
                 )
         
-        console.print(f"[green]✓[/green] Crawling complete. Found {len(all_urls)} URLs\n")
+        console.print(f"[green][/green] Crawling complete. Found {len(all_urls)} URLs\n")
         return all_urls
     
     def scan_url(self, url: str, recon_data: Optional[Dict] = None) -> List[Dict]:
@@ -220,7 +220,7 @@ class ScannerEngine:
     
     def scan_all_urls(self, urls: Set[str], recon_data: Optional[Dict] = None):
         """Scan all discovered URLs for vulnerabilities."""
-        console.print("[bold blue]🔍 Starting vulnerability scanning...[/bold blue]")
+        console.print("[bold blue] Starting vulnerability scanning...[/bold blue]")
         
         with Progress(
             SpinnerColumn(),
@@ -259,13 +259,13 @@ class ScannerEngine:
                         logger.error(f"Error processing {url}: {e}")
                         progress.advance(task)
         
-        console.print(f"[green]✓[/green] Vulnerability scanning complete. Found {len(self.vulnerabilities)} issues\n")
+        console.print(f"[green][/green] Vulnerability scanning complete. Found {len(self.vulnerabilities)} issues\n")
     
     def run_reconnaissance(self) -> Dict:
         """Run reconnaissance modules."""
-        console.print("[bold blue]🔎 Running reconnaissance...[/bold blue]")
+        console.print("[bold blue] Running reconnaissance...[/bold blue]")
         recon_results = self.recon_engine.run(self.target_url)
-        console.print("[green]✓[/green] Reconnaissance complete\n")
+        console.print("[green][/green] Reconnaissance complete\n")
         return recon_results
     
     def scan(

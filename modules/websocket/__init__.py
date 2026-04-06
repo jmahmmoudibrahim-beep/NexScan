@@ -1,1 +1,1 @@
-# NexScan - WebSocket Module
+from modules.websocket.websocket_tester import WebSocketTester

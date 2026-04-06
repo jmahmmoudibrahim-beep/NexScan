@@ -1,1 +1,1 @@
-# NexScan - ML Detection Module
+from modules.ml_detection.anomaly_detector import MLAnomalyDetector as AnomalyDetector

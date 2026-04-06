@@ -1,1 +1,1 @@
-# NexScan - Payload Obfuscation Module
+from modules.payload_obfuscation.obfuscator import PayloadObfuscator

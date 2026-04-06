@@ -1,1 +1,1 @@
-# NexScan - Collaboration Module
+from modules.collaboration.collaborative_scanner import CollaborativeScanner

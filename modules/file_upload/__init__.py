@@ -1,1 +1,1 @@
-# NexScan - File Upload Module
+from modules.file_upload.upload_tester import FileUploadTester
