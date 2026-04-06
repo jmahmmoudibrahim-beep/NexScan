@@ -11,7 +11,7 @@
 
 ---
 
-NexScan is an AI-powered penetration testing and vulnerability scanning tool that integrates multiple AI providers (OpenAI, Claude, Grok, Ollama, Mistral, OpenRouter) to deliver intelligent payload generation, comprehensive security assessments, and professional reporting.
+NexScan is an AI-powered penetration testing and vulnerability scanning tool that integrates multiple AI providers (OpenAI, Grok, Ollama, Mistral, OpenRouter) to deliver intelligent payload generation, comprehensive security assessments, and professional reporting.
 
 ## Features
 
@@ -62,7 +62,7 @@ NexScan is an AI-powered penetration testing and vulnerability scanning tool tha
 
 - Python 3.8 or higher
 - API key for at least one supported AI provider:
-  - OpenAI, Anthropic (Claude), xAI (Grok), Mistral, or OpenRouter
+  - OpenAI, xAI (Grok), Mistral, or OpenRouter
   - Or a local Ollama instance (no API key needed)
 
 ## Installation
@@ -107,7 +107,7 @@ python nexscan.py -u https://target.com
 python nexscan.py -u https://target.com --full-scan --recon
 
 # Scan with a specific AI provider
-python nexscan.py -u https://target.com --provider claude
+python nexscan.py -u https://target.com --provider grok
 ```
 
 ### Configuration-Driven Scanning
@@ -123,11 +123,6 @@ ai_providers:
     enabled: true
     api_key: "your-api-key"
     model: "gpt-4o"
-  claude:
-    enabled: false
-    api_key: "your-api-key"
-    model: "claude-3-5-sonnet-20241022"
-
 scanner:
   default_threads: 5
   default_depth: 2
@@ -158,7 +153,7 @@ python nexscan.py -c config/config.yaml
 |---|---|
 | `-u, --url` | Target URL to scan |
 | `-c, --config` | Path to configuration file |
-| `--provider` | AI provider to use (openai, claude, grok, ollama, mistral, openrouter) |
+| `--provider` | AI provider to use (openai, grok, ollama, mistral, openrouter) |
 | `--depth` | Crawl depth (default: 2) |
 | `--threads` | Number of threads (default: 5) |
 | `--full-scan` | Enable all vulnerability checks |
@@ -185,7 +180,6 @@ NexScan/
 ├── ai_providers/
 │   ├── provider_manager.py     # Multi-provider manager
 │   ├── openai_provider.py      # OpenAI integration
-│   ├── claude_provider.py      # Anthropic Claude integration
 │   ├── grok_provider.py        # xAI Grok integration
 │   ├── ollama_provider.py      # Local Ollama integration
 │   ├── mistral_provider.py     # Mistral AI integration

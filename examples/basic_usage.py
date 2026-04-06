@@ -24,7 +24,7 @@ def main():
 
     # Initialize AI Provider
     ai_manager = AIProviderManager(config)
-    ai_manager.set_provider("openai")  # or "claude", "grok", "ollama"
+    ai_manager.set_provider("openai")  # or "grok", "ollama", "mistral", "openrouter"
 
     # Configure scan
     target_url = "https://example.com"

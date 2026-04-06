@@ -34,15 +34,6 @@ class AIProviderManager:
             except Exception as e:
                 logger.warning(f"Failed to initialize OpenAI provider: {e}")
 
-        # Claude
-        if ai_config.get('claude', {}).get('enabled', False):
-            try:
-                from ai_providers.claude_provider import ClaudeProvider
-                self.providers['claude'] = ClaudeProvider(ai_config['claude'])
-                logger.info("Claude provider initialized")
-            except Exception as e:
-                logger.warning(f"Failed to initialize Claude provider: {e}")
-
         # Grok
         if ai_config.get('grok', {}).get('enabled', False):
             try:
