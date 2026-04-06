@@ -41,7 +41,7 @@ BANNER = r"""
 |_| \_|\___/_/\_\____/ \___\__,_|_| |_|
 
   Advanced AI-Driven Penetration Testing Tool
-  Version 1.3.0
+  Version 1.3.0 | By Hulk
 """
 
 
@@ -89,7 +89,7 @@ Note: All scan options are configured in config.yaml
     parser.add_argument(
         '--version',
         action='version',
-        version='NexScan v1.3.0 (Hestia)',
+        version='NexScan v1.3.0 (Hestia) | By Hulk',
         help='Show version and exit'
     )
     
@@ -105,6 +105,7 @@ Note: All scan options are configured in config.yaml
 def display_banner():
     """Display the NexScan banner."""
     console.print(BANNER, style="bold cyan")
+    console.print("[bold magenta]  Developed by Hulk[/bold magenta]")
     console.print("[bold yellow]WARNING: Use only on authorized targets[/bold yellow]\n")
 
 
@@ -261,7 +262,8 @@ def main():
         )
         console.print("\n", summary)
         
-        console.print("\n[bold green]Scan completed successfully![/bold green] \n")
+        console.print("\n[bold green]Scan completed successfully![/bold green]")
+        console.print("[dim]NexScan v1.3.0 | By Hulk[/dim]\n")
         
     except KeyboardInterrupt:
         console.print("\n[bold yellow]Scan interrupted by user[/bold yellow]")
